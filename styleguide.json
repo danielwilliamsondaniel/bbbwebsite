@@ -1,0 +1,100 @@
+{
+    "brand_name": "Top Ramen",
+    "visual_identity": {
+      "primary_colors": {
+        "orange": "#F15A29",
+        "black": "#000000",
+        "white": "#FFFFFF",
+        "red": "#E41B17",
+        "light_blue": "#43C4DD",
+        "golden_noodles": "#F1C34B",
+        "pale_beige": "#E9D7A9"
+      },
+      "color_usage": {
+        "background_primary": "orange",
+        "accent_badge": "light_blue",
+        "brand_name_text": "black with white outline",
+        "flavor_text": "white and pale beige gradient",
+        "nutrition_notes": "white text on orange",
+        "net_weight": "white text on orange",
+        "ingredient_illustration": "photorealistic with green parsley"
+      },
+      "fonts": {
+        "logo": {
+          "family": "Bold Sans Serif (heavy, rounded)",
+          "style": "Black bold with white outline, shadowed",
+          "case": "Title Case"
+        },
+        "flavor_text": {
+          "family": "Condensed Sans Serif",
+          "style": "All caps, bold",
+          "color": "white"
+        },
+        "nutritional_notes": {
+          "family": "Narrow Sans Serif",
+          "style": "All caps, thin",
+          "color": "white"
+        }
+      },
+      "iconography": {
+        "badge": {
+          "shape": "circular",
+          "color": "light_blue",
+          "text": "NO ADDED MSG",
+          "font": "Condensed Sans Serif, white"
+        }
+      },
+      "texture_patterns": {
+        "background_pattern": "wavy horizontal lines on orange base"
+      },
+      "photography": {
+        "noodles": {
+          "type": "high-resolution, slightly glossy texture",
+          "color": "golden yellow with subtle oil sheen",
+          "plating": "close-up bowl shot"
+        },
+        "meat_slice": {
+          "type": "photorealistic roast chicken slice",
+          "accent": "green parsley leaf"
+        }
+      },
+      "shapes": {
+        "layout": "central oval containing logo and flavor, semi-circle cut revealing noodles",
+        "badge_position": "left middle",
+        "serving_suggestion_placement": "bottom center"
+      },
+      "language_tone": {
+        "tagline": "THE ORIGINAL",
+        "style": "friendly, bold, straightforward"
+      },
+      "branding_marks": {
+        "logo": "Top Ramen wordmark with registered trademark symbol",
+        "company": "Nissin logo in red oval"
+      }
+    },
+    "website_style_guide": {
+      "layout": {
+        "header": "dominant logo with bold background color",
+        "sections": [
+          "hero section with noodles as background texture",
+          "badges for nutrition highlights",
+          "callouts in circular badges"
+        ]
+      },
+      "buttons": {
+        "primary": {
+          "background": "orange",
+          "text": "white bold sans serif"
+        },
+        "secondary": {
+          "background": "light_blue",
+          "text": "white"
+        }
+      },
+      "hover_effects": {
+        "primary_buttons": "slight shadow pop, darker orange hover",
+        "badges": "light_blue glow"
+      }
+    }
+  }
+  
