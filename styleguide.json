@@ -1,100 +1,181 @@
 {
-    "brand_name": "Top Ramen",
-    "visual_identity": {
-      "primary_colors": {
-        "orange": "#F15A29",
-        "black": "#000000",
-        "white": "#FFFFFF",
-        "red": "#E41B17",
-        "light_blue": "#43C4DD",
-        "golden_noodles": "#F1C34B",
-        "pale_beige": "#E9D7A9"
+  "brand_name": "Bengaluru Bootstrap Boys - Cup of Noodles Style",
+  "visual_identity": {
+    "primary_colors": {
+      "golden_yellow": "#FFD700",
+      "warm_orange": "#FF8C00", 
+      "fiery_red": "#FF4500",
+      "deep_crimson": "#DC143C",
+      "dark_red": "#8B0000",
+      "noodle_brown": "#8B4513",
+      "light_brown": "#CD853F",
+      "cream": "#FFE4B5",
+      "khaki": "#F0E68C",
+      "bright_yellow": "#FFFF00",
+      "tomato": "#FF6347",
+      "white": "#FFFFFF"
+    },
+    "gradients": {
+      "main_background": "radial-gradient(ellipse at center, #FFD700 0%, #FF8C00 30%, #FF4500 60%, #DC143C 100%)",
+      "navbar_gradient": "linear-gradient(135deg, #FFE4B5 0%, #F0E68C 25%, #FFD700 50%, #FFA500 75%, #FF8C00 100%)",
+      "nav_link_gradient": "linear-gradient(135deg, #FFD700 0%, #FF8C00 50%, #FF4500 100%)",
+      "cta_button_gradient": "linear-gradient(135deg, #FF4500 0%, #FF8C00 50%, #FFD700 100%)",
+      "cta_hover_gradient": "linear-gradient(135deg, #FF6347 0%, #FFA500 50%, #FFFF00 100%)"
+    },
+    "color_usage": {
+      "background_primary": "main_background gradient",
+      "navbar_background": "navbar_gradient with brown borders",
+      "text_primary": "dark_red (#8B0000)",
+      "text_secondary": "white with shadow effects",
+      "accent_primary": "golden_yellow (#FFD700)",
+      "accent_secondary": "warm_orange (#FF8C00)",
+      "border_primary": "noodle_brown (#8B4513)",
+      "glow_effects": "golden_yellow and warm_orange"
+    },
+    "typography": {
+      "main_heading": {
+        "family": "Inter, sans-serif",
+        "weight": 900,
+        "style": "uppercase, bold with perspective transform",
+        "color": "dark_red (#8B0000)",
+        "text_shadow": "multi-layer golden and orange shadows with glow",
+        "transform": "perspective(500px) rotateX(15deg)",
+        "letter_spacing": "0.05em"
       },
-      "color_usage": {
-        "background_primary": "orange",
-        "accent_badge": "light_blue",
-        "brand_name_text": "black with white outline",
-        "flavor_text": "white and pale beige gradient",
-        "nutrition_notes": "white text on orange",
-        "net_weight": "white text on orange",
-        "ingredient_illustration": "photorealistic with green parsley"
+      "large_heading": {
+        "family": "Inter, sans-serif", 
+        "weight": 900,
+        "style": "uppercase, bold with perspective transform",
+        "color": "white (#FFFFFF)",
+        "text_shadow": "multi-layer red and golden shadows with animated glow",
+        "transform": "perspective(600px) rotateX(10deg)",
+        "animation": "glow effect alternating every 2 seconds",
+        "letter_spacing": "0.02em"
       },
-      "fonts": {
-        "logo": {
-          "family": "Bold Sans Serif (heavy, rounded)",
-          "style": "Black bold with white outline, shadowed",
-          "case": "Title Case"
-        },
-        "flavor_text": {
-          "family": "Condensed Sans Serif",
-          "style": "All caps, bold",
-          "color": "white"
-        },
-        "nutritional_notes": {
-          "family": "Narrow Sans Serif",
-          "style": "All caps, thin",
-          "color": "white"
-        }
+      "navigation": {
+        "family": "Inter, sans-serif",
+        "weight": 900,
+        "style": "uppercase with heavy letter-spacing",
+        "color": "dark_red (#8B0000)",
+        "text_shadow": "golden and brown outline effect",
+        "letter_spacing": "1px"
       },
-      "iconography": {
-        "badge": {
-          "shape": "circular",
-          "color": "light_blue",
-          "text": "NO ADDED MSG",
-          "font": "Condensed Sans Serif, white"
-        }
-      },
-      "texture_patterns": {
-        "background_pattern": "wavy horizontal lines on orange base"
-      },
-      "photography": {
-        "noodles": {
-          "type": "high-resolution, slightly glossy texture",
-          "color": "golden yellow with subtle oil sheen",
-          "plating": "close-up bowl shot"
-        },
-        "meat_slice": {
-          "type": "photorealistic roast chicken slice",
-          "accent": "green parsley leaf"
-        }
-      },
-      "shapes": {
-        "layout": "central oval containing logo and flavor, semi-circle cut revealing noodles",
-        "badge_position": "left middle",
-        "serving_suggestion_placement": "bottom center"
-      },
-      "language_tone": {
-        "tagline": "THE ORIGINAL",
-        "style": "friendly, bold, straightforward"
-      },
-      "branding_marks": {
-        "logo": "Top Ramen wordmark with registered trademark symbol",
-        "company": "Nissin logo in red oval"
+      "button_text": {
+        "family": "Inter, sans-serif",
+        "weight": 900,
+        "style": "uppercase with wide letter-spacing",
+        "color": "white (#FFFFFF)",
+        "text_shadow": "dark red outline with glow",
+        "letter_spacing": "0.1em"
       }
     },
-    "website_style_guide": {
-      "layout": {
-        "header": "dominant logo with bold background color",
-        "sections": [
-          "hero section with noodles as background texture",
-          "badges for nutrition highlights",
-          "callouts in circular badges"
-        ]
+    "effects_and_animations": {
+      "steam_animation": {
+        "name": "steam",
+        "duration": "4s",
+        "timing": "ease-in-out infinite",
+        "properties": "opacity and translateY transform",
+        "description": "Rising steam effect on hero background"
       },
-      "buttons": {
-        "primary": {
-          "background": "orange",
-          "text": "white bold sans serif"
-        },
-        "secondary": {
-          "background": "light_blue",
-          "text": "white"
-        }
+      "text_glow_animation": {
+        "name": "glow", 
+        "duration": "2s",
+        "timing": "ease-in-out infinite alternate",
+        "properties": "text-shadow intensity variation",
+        "description": "Pulsing glow effect on main title"
       },
-      "hover_effects": {
-        "primary_buttons": "slight shadow pop, darker orange hover",
-        "badges": "light_blue glow"
+      "button_glow_animation": {
+        "name": "buttonGlow",
+        "duration": "3s", 
+        "timing": "ease-in-out infinite alternate",
+        "properties": "box-shadow intensity and spread",
+        "description": "Glowing border effect on CTA button"
       }
+    },
+    "texture_patterns": {
+      "body_background": "Multi-layered radial gradients with diagonal lines creating noodle texture",
+      "navbar_texture": "Horizontal lines with radial dot patterns simulating cup rim",
+      "hero_steam_pattern": "Conic gradients with wavy SVG lines creating steam wisps",
+      "noodle_emoji_overlay": "🍜 emoji at reduced opacity for subtle branding"
+    },
+    "shadows_and_borders": {
+      "navbar_shadow": "inset shadows with brown borders creating cup rim depth",
+      "video_container_border": "Multiple layered borders: brown, golden, with inset glow",
+      "button_shadow": "Multi-layer box shadows with glow effects",
+      "text_shadows": "Multi-directional shadows creating 3D pop effect"
     }
+  },
+  "component_specifications": {
+    "navbar": {
+      "background": "Golden gradient with brown borders",
+      "height": "Auto-sizing with flex-shrink: 0",
+      "border": "6px solid brown bottom, 3px solid light brown top",
+      "shadow": "Inset highlights and brown depth shadows",
+      "pattern": "Horizontal lines with radial dots",
+      "logo": "🍜 emoji with golden text shadows"
+    },
+    "hero_container": {
+      "layout": "Flexbox with space-evenly distribution",
+      "background": "Radial gradient with animated steam overlay",
+      "height": "Flex: 1 to fill remaining viewport",
+      "padding": "Responsive padding maintaining aspect ratios",
+      "effects": "Animated steam wisps with SVG patterns"
+    },
+    "title_styling": {
+      "line_1": "Smaller text with perspective tilt and golden glow",
+      "line_2": "Large text with animated glow and 3D perspective",
+      "spacing": "Optimized for visual hierarchy"
+    },
+    "video_container": {
+      "borders": "Triple border: brown, golden outline, shadow",
+      "background": "Golden gradient behind video",
+      "shadow": "Deep shadows with golden glow inset",
+      "dimensions": "Responsive with max constraints"
+    },
+    "cta_button": {
+      "background": "Gradient from red to golden",
+      "border": "Thick red border with golden outline",
+      "hover_effects": "Scale transform with enhanced glow",
+      "animation": "Continuous glow pulsing effect",
+      "typography": "Heavy weight uppercase with wide spacing"
+    }
+  },
+  "responsive_design": {
+    "mobile_768px": {
+      "navbar": "Reduced padding and font sizes",
+      "hero": "Adjusted padding with maintained flex layout",
+      "video": "Reduced height (30vh) with smaller max-height",
+      "text": "Responsive clamp sizing maintained"
+    },
+    "mobile_480px": {
+      "navbar": "Further reduced spacing",
+      "hero": "Minimal padding with flex layout",
+      "video": "Smallest size (25vh) for mobile viewing",
+      "text": "Smallest responsive sizes with maintained effects"
+    }
+  },
+  "interaction_states": {
+    "hover_effects": {
+      "logo": "Scale and rotate transform",
+      "nav_links": "Brighter gradients with enhanced shadows and translateY",
+      "cta_button": "Scale up with brighter gradient and enhanced glow"
+    },
+    "active_states": {
+      "nav_links": "Pressed effect with inset shadows",
+      "cta_button": "Slight scale down maintaining glow"
+    }
+  },
+  "accessibility_considerations": {
+    "color_contrast": "High contrast maintained with dark red on golden backgrounds",
+    "text_readability": "Multiple text shadows ensure readability against gradient backgrounds",
+    "interactive_feedback": "Clear hover and active states with transform feedback",
+    "responsive_text": "Clamp() functions ensure readable text at all screen sizes"
+  },
+  "brand_personality": {
+    "visual_tone": "Bold, vibrant, playful like instant noodle packaging",
+    "energy_level": "High energy with animated effects and bright colors",
+    "cultural_reference": "Cup of noodles aesthetic with Asian-inspired warmth",
+    "interaction_style": "Engaging hover effects and glowing animations",
+    "memorability": "Distinctive noodle cup styling with warm golden palette"
   }
-  
+}
