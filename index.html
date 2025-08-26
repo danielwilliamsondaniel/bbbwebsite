@@ -140,54 +140,62 @@
                 padding: 0.5rem;
             }
 
+            .title {
+                margin-bottom: 1.5rem;
+            }
+
             .title-line-1 {
-                font-size: clamp(1.5rem, 6vw, 2.5rem);
-                margin-bottom: 0.3rem;
+                font-size: clamp(2rem, 8vw, 3.5rem);
+                margin-bottom: 0.5rem;
             }
 
             .title-line-2 {
-                font-size: clamp(2.5rem, 10vw, 4rem);
+                font-size: clamp(3.5rem, 14vw, 6rem);
             }
 
             .video-container {
-                margin: 0.5rem 0;
+                margin: 1rem 0;
                 border-radius: 15px;
+                height: calc(40vh - 200px);
+                max-height: 250px;
             }
 
             .cta-button {
                 font-size: clamp(1rem, 4vw, 1.5rem);
                 padding: 0.8rem 2rem;
-                margin-top: 0.5rem;
+                margin-top: 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
             .hero-container {
-                padding: 0.3rem;
+                padding: 0.5rem;
             }
 
             .title {
-                margin-bottom: 0.5rem;
+                margin-bottom: 2rem;
             }
 
             .title-line-1 {
-                font-size: clamp(1rem, 5vw, 1.8rem);
-                margin-bottom: 0.2rem;
+                font-size: clamp(1.5rem, 7vw, 2.5rem);
+                margin-bottom: 0.4rem;
             }
 
             .title-line-2 {
-                font-size: clamp(2rem, 8vw, 3rem);
+                font-size: clamp(3rem, 12vw, 4.5rem);
             }
 
             .video-container {
-                margin: 0.3rem 0;
+                margin: 1rem 0;
                 border-radius: 10px;
+                height: calc(35vh - 200px);
+                max-height: 200px;
             }
 
             .cta-button {
                 font-size: clamp(0.9rem, 3.5vw, 1.3rem);
-                padding: 0.7rem 2rem;
-                margin-top: 0.3rem;
+                padding: 1rem 2.5rem;
+                margin-top: 2rem;
             }
         }
     </style>
@@ -200,10 +208,7 @@
         </h1>
         
         <div class="video-container">
-            <video class="hero-video" controls>
-                <source src="Bbbintroforweb.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe class="hero-video" src="https://www.youtube.com/embed/IRDEikKQmQA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         
         <a href="http://wa.me/917996672991" class="cta-button">Hit me up</a>
