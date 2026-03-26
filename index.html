@@ -17,34 +17,15 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: radial-gradient(ellipse at center, #FFD700 0%, #FF8C00 30%, #FF4500 60%, #DC143C 100%);
-            height: 100vh;
-            max-height: 100vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
+            background: #8B0000;
         }
-        
-        body::before {
-            content: '';
-            position: absolute;
+
+        /* ── NAVBAR ── */
+        .navbar {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 2px, transparent 2px),
-                radial-gradient(circle at 60% 70%, rgba(255,255,255,0.2) 3px, transparent 3px),
-                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.25) 1px, transparent 1px),
-                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);
-            background-size: 50px 50px, 80px 80px, 30px 30px, 40px 40px;
-            pointer-events: none;
-            opacity: 0.6;
-        }
-
-        .navbar {
-            flex-shrink: 0;
             z-index: 1000;
             background: linear-gradient(135deg, #FFE4B5 0%, #F0E68C 25%, #FFD700 50%, #FFA500 75%, #FF8C00 100%);
             border-bottom: 6px solid #8B4513;
@@ -53,9 +34,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
             overflow: hidden;
-            box-shadow: 
+            box-shadow:
                 inset 0 2px 4px rgba(255,255,255,0.3),
                 inset 0 -2px 4px rgba(139,69,19,0.3),
                 0 4px 8px rgba(0,0,0,0.2);
@@ -64,31 +44,18 @@
         .navbar::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                repeating-linear-gradient(90deg, 
-                    transparent 0px, 
-                    transparent 8px, 
-                    rgba(139,69,19,0.2) 8px, 
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                repeating-linear-gradient(90deg,
+                    transparent 0px,
+                    transparent 8px,
+                    rgba(139,69,19,0.2) 8px,
                     rgba(139,69,19,0.2) 10px),
-                repeating-radial-gradient(circle at center, 
-                    rgba(255,255,255,0.3) 0px, 
-                    rgba(255,255,255,0.3) 1px, 
-                    transparent 1px, 
+                repeating-radial-gradient(circle at center,
+                    rgba(255,255,255,0.3) 0px,
+                    rgba(255,255,255,0.3) 1px,
+                    transparent 1px,
                     transparent 15px);
-            pointer-events: none;
-        }
-
-        .navbar::after {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.5rem;
-            opacity: 0.2;
             pointer-events: none;
         }
 
@@ -98,7 +65,7 @@
             transition: transform 0.3s ease;
             position: relative;
             z-index: 10;
-            text-shadow: 
+            text-shadow:
                 2px 2px 0 #8B4513,
                 -1px -1px 0 #FFD700,
                 1px 1px 0 #FF8C00;
@@ -130,10 +97,10 @@
             z-index: 10;
             background: linear-gradient(135deg, #FFD700 0%, #FF8C00 50%, #FF4500 100%);
             border: 3px solid #8B4513;
-            text-shadow: 
-                1px 1px 0 #FFD700,
-                -1px -1px 0 #8B4513;
-            box-shadow: 
+            text-shadow:
+                1px 1px 2px rgba(0,0,0,0.5),
+                0 0 8px rgba(255,255,255,0.3);
+            box-shadow:
                 inset 0 2px 4px rgba(255,255,255,0.4),
                 inset 0 -2px 4px rgba(139,69,19,0.4),
                 0 4px 8px rgba(0,0,0,0.3);
@@ -141,25 +108,11 @@
             letter-spacing: 1px;
         }
 
-        .nav-link:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            transition: left 0.5s ease;
-        }
-
-        .nav-link:hover:before {
-            left: 100%;
-        }
-
         .nav-link:hover {
             background: linear-gradient(135deg, #FFF8DC 0%, #FFD700 50%, #FF8C00 100%);
             color: #800000;
             transform: translateY(-2px);
-            box-shadow: 
+            box-shadow:
                 inset 0 2px 6px rgba(255,255,255,0.6),
                 inset 0 -2px 6px rgba(139,69,19,0.6),
                 0 6px 12px rgba(0,0,0,0.4);
@@ -168,43 +121,57 @@
 
         .nav-link:active {
             transform: translateY(0px);
-            box-shadow: 
+            box-shadow:
                 inset 0 2px 4px rgba(0,0,0,0.2),
                 0 1px 2px rgba(0,0,0,0.1);
         }
 
+        /* ── HERO ── */
         .hero-container {
-            flex: 1;
+            height: 100vh;
+            padding-top: 150px;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             align-items: center;
-            padding: 1rem 0.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 1rem;
             position: relative;
             overflow: hidden;
+            background: radial-gradient(ellipse at center, #FFD700 0%, #FF8C00 30%, #FF4500 60%, #DC143C 100%);
         }
 
         .hero-container::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                repeating-conic-gradient(from 0deg at 50% 50%, 
-                    rgba(255,255,255,0.1) 0deg, 
-                    rgba(255,255,255,0.1) 2deg, 
-                    transparent 2deg, 
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 2px, transparent 2px),
+                radial-gradient(circle at 60% 70%, rgba(255,255,255,0.2) 3px, transparent 3px),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.25) 1px, transparent 1px),
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);
+            background-size: 50px 50px, 80px 80px, 30px 30px, 40px 40px;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .hero-container::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                repeating-conic-gradient(from 0deg at 50% 50%,
+                    rgba(255,255,255,0.1) 0deg,
+                    rgba(255,255,255,0.1) 2deg,
+                    transparent 2deg,
                     transparent 8deg),
                 radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.3) 0%, transparent 30%),
-                radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.2) 0%, transparent 25%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,50 Q30,40 40,50 T60,50 T80,50" stroke="%23ffffff" stroke-width="2" fill="none" opacity="0.1"/><path d="M10,30 Q20,20 30,30 T50,30 T70,30" stroke="%23ffffff" stroke-width="1.5" fill="none" opacity="0.1"/></svg>');
-            background-size: 40px 40px, 200px 200px, 150px 150px, 80px 80px;
+                radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.2) 0%, transparent 25%);
             pointer-events: none;
             animation: steam 4s ease-in-out infinite;
         }
-        
+
         @keyframes steam {
             0%, 100% { opacity: 0.3; transform: translateY(0); }
             50% { opacity: 0.6; transform: translateY(-10px); }
@@ -215,82 +182,161 @@
             z-index: 2;
             position: relative;
             flex-shrink: 0;
+            width: 100%;
         }
 
         .title-line-1 {
-            font-size: clamp(2rem, 6vw, 4rem);
+            font-size: clamp(1rem, 2.5vw, 2rem);
             font-weight: 900;
-            color: #8B0000;
-            text-shadow: 
-                3px 3px 0 #FFD700,
-                -2px -2px 0 #FF8C00,
-                0 0 15px rgba(255,215,0,0.8),
-                0 0 30px rgba(255,140,0,0.6);
+            color: #FFFFFF;
+            text-shadow:
+                3px 3px 0 #8B0000,
+                0 2px 8px rgba(0,0,0,0.6);
             letter-spacing: 0.05em;
             line-height: 1.1;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             text-transform: uppercase;
             transform: perspective(500px) rotateX(15deg);
         }
 
         .title-line-2 {
-            font-size: clamp(4rem, 12vw, 8rem);
+            font-size: clamp(2rem, 6vw, 4.5rem);
             font-weight: 900;
             color: #FFFFFF;
-            text-shadow: 
+            text-shadow:
                 4px 4px 0 #8B0000,
-                -3px -3px 0 #FFD700,
-                0 0 20px rgba(139,0,0,0.8),
-                0 0 40px rgba(255,215,0,0.6),
-                0 0 60px rgba(255,69,0,0.4);
+                0 0 20px rgba(255,215,0,0.6);
             letter-spacing: 0.02em;
             line-height: 1;
-            transition: all 0.3s ease;
             text-transform: uppercase;
             transform: perspective(600px) rotateX(10deg);
             animation: glow 2s ease-in-out infinite alternate;
         }
-        
+
         @keyframes glow {
-            from { text-shadow: 
+            from { text-shadow:
                 4px 4px 0 #8B0000,
-                -3px -3px 0 #FFD700,
-                0 0 20px rgba(139,0,0,0.8),
-                0 0 40px rgba(255,215,0,0.6),
-                0 0 60px rgba(255,69,0,0.4); }
-            to { text-shadow: 
+                0 0 20px rgba(255,215,0,0.6); }
+            to { text-shadow:
                 4px 4px 0 #8B0000,
-                -3px -3px 0 #FFD700,
-                0 0 30px rgba(139,0,0,1),
-                0 0 50px rgba(255,215,0,0.8),
-                0 0 70px rgba(255,69,0,0.6); }
+                0 0 35px rgba(255,215,0,0.9); }
         }
 
-        .video-container {
+        .title-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: 700;
+            color: #FFE4B5;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            letter-spacing: 0.06em;
+            margin-top: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        /* ── HERO BODY (two-column) ── */
+        .hero-body {
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
             width: 100%;
-            max-width: 600px;
-            height: 35vh;
-            max-height: 300px;
-            border-radius: 25px;
+            max-width: 1150px;
+            align-items: center;
+            flex: 1;
+            z-index: 2;
+            position: relative;
+            min-height: 0;
+            margin-top: -90px;
+        }
+
+        .hero-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            z-index: 2;
+            position: relative;
+            background: rgba(0, 0, 0, 0.42);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-headline {
+            font-size: clamp(1.1rem, 2vw, 1.45rem);
+            font-weight: 900;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            text-shadow:
+                2px 2px 0 #8B0000,
+                0 0 14px rgba(255,215,0,0.6);
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+        }
+
+        .hero-pitch {
+            font-size: clamp(0.82rem, 1.35vw, 1rem);
+            color: #fffcf8;
+            font-weight: 700;
+            line-height: 1.65;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.5), 0 1px 6px rgba(0,0,0,0.7);
+        }
+
+        .hero-pitch strong {
+            color: #FFD700;
+            text-shadow: 1px 1px 0 #8B0000;
+        }
+
+        .hero-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hero-list li {
+            color: #FFE4B5;
+            font-weight: 700;
+            font-size: clamp(0.82rem, 1.35vw, 1rem);
+            padding: 0.3rem 0 0.3rem 1.5rem;
+            position: relative;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+            border-bottom: 1px solid rgba(255,215,0,0.15);
+        }
+
+        .hero-list li:last-child { border-bottom: none; }
+
+        .hero-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            font-size: 0.65rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* ── SHORT VIDEO ── */
+        .short-container {
+            flex-shrink: 0;
+            height: calc(100vh - 80px - 120px - 4rem);
+            max-height: 460px;
+            min-height: 280px;
+            aspect-ratio: 9/16;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 
-                0 0 0 5px #8B4513,
-                0 0 0 10px #FFD700,
-                0 15px 30px rgba(0,0,0,0.4),
+            box-shadow:
+                0 0 0 4px #8B4513,
+                0 0 0 9px #FFD700,
+                0 15px 30px rgba(0,0,0,0.5),
                 inset 0 0 20px rgba(255,215,0,0.3);
             z-index: 2;
             position: relative;
-            display: flex;
-            align-items: center;
-            flex-shrink: 0;
-            background: linear-gradient(45deg, #FFD700, #FF8C00);
             border: 3px solid #8B4513;
+            background: #000;
         }
 
-        .hero-video {
+        .short-video {
             width: 100%;
             height: 100%;
-            object-fit: contain;
             display: block;
         }
 
@@ -299,33 +345,36 @@
             color: #FFFFFF;
             font-size: clamp(1rem, 3vw, 1.5rem);
             font-weight: 900;
-            padding: 1rem 3rem;
+            padding: 0.75rem 1.75rem;
             border: 4px solid #8B0000;
             border-radius: 40px;
             text-decoration: none;
             display: inline-block;
+            width: 300px;
+            text-align: center;
+            box-sizing: border-box;
             transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            box-shadow: 
+            letter-spacing: 0.05em;
+            box-shadow:
                 0 0 0 2px #FFD700,
                 0 8px 20px rgba(255,69,0,0.4),
                 inset 0 2px 4px rgba(255,255,255,0.3);
             z-index: 2;
             position: relative;
             flex-shrink: 0;
-            text-shadow: 
+            text-shadow:
                 2px 2px 0 #8B0000,
                 0 0 10px rgba(139,0,0,0.8);
             animation: buttonGlow 3s ease-in-out infinite alternate;
         }
-        
+
         @keyframes buttonGlow {
-            from { box-shadow: 
+            from { box-shadow:
                 0 0 0 2px #FFD700,
                 0 8px 20px rgba(255,69,0,0.4),
                 inset 0 2px 4px rgba(255,255,255,0.3); }
-            to { box-shadow: 
+            to { box-shadow:
                 0 0 0 2px #FFD700,
                 0 12px 30px rgba(255,69,0,0.6),
                 inset 0 2px 4px rgba(255,255,255,0.4),
@@ -335,7 +384,7 @@
         .cta-button:hover {
             background: linear-gradient(135deg, #FF6347 0%, #FFA500 50%, #FFFF00 100%);
             transform: translateY(-4px) scale(1.05);
-            box-shadow: 
+            box-shadow:
                 0 0 0 3px #FFD700,
                 0 15px 40px rgba(255,69,0,0.6),
                 inset 0 3px 6px rgba(255,255,255,0.5),
@@ -346,94 +395,340 @@
             transform: translateY(-1px);
         }
 
+        /* ── DIVIDER ── */
+        .noodle-divider {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #FFD700 0%, #FF8C00 25%, #FF4500 50%, #FF8C00 75%, #FFD700 100%);
+            position: relative;
+        }
+
+        .noodle-divider::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: repeating-linear-gradient(90deg,
+                transparent 0px, transparent 4px,
+                rgba(139,69,19,0.4) 4px, rgba(139,69,19,0.4) 5px);
+        }
+
+        /* ── CONTENT SECTIONS ── */
+        .sections-wrapper {
+            background: radial-gradient(ellipse at top, #FF4500 0%, #DC143C 40%, #8B0000 100%);
+            position: relative;
+        }
+
+        .sections-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                rgba(255,215,0,0.04) 20px,
+                rgba(255,215,0,0.04) 40px
+            );
+            pointer-events: none;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section + .section {
+            border-top: 3px solid rgba(255,215,0,0.2);
+        }
+
+        .section-heading {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 900;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-shadow:
+                3px 3px 0 #8B0000,
+                -1px -1px 0 #FF8C00,
+                0 0 20px rgba(255,215,0,0.5);
+            margin-bottom: 1.5rem;
+            transform: perspective(500px) rotateX(5deg);
+        }
+
+        .section-lead {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #FFE4B5;
+            font-weight: 700;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.5), 0 1px 6px rgba(0,0,0,0.7);
+        }
+
+        .section-body {
+            font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+            color: #FFE4B5;
+            font-weight: 400;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 1px 6px rgba(0,0,0,0.7);
+        }
+
+        /* bullet lists */
+        .noodle-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .noodle-list li {
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: #FFE4B5;
+            font-weight: 700;
+            padding: 0.65rem 0 0.65rem 2rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255,215,0,0.15);
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.4), 0 1px 6px rgba(0,0,0,0.7);
+        }
+
+        .noodle-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            font-size: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .noodle-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(255,228,181,0.12) 0%, rgba(255,215,0,0.08) 100%);
+            border: 3px solid #8B4513;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow:
+                inset 0 2px 4px rgba(255,255,255,0.08),
+                0 4px 12px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FF8C00, #FF4500);
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 900;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+            text-shadow: 1px 1px 0 #8B0000;
+        }
+
+        .card-body {
+            font-size: 0.95rem;
+            color: #FFE4B5;
+            line-height: 1.65;
+        }
+
+        /* pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, #FF8C00 0%, #FF4500 50%, #DC143C 100%);
+            border: 4px solid #FFD700;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow:
+                0 0 0 2px #8B4513,
+                0 8px 24px rgba(0,0,0,0.4),
+                inset 0 2px 6px rgba(255,255,255,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.03) 10px,
+                rgba(255,255,255,0.03) 20px
+            );
+            pointer-events: none;
+        }
+
+        .pricing-tier {
+            font-size: 1rem;
+            font-weight: 900;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 #8B0000;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-price {
+            font-size: clamp(1.3rem, 3vw, 1.9rem);
+            font-weight: 900;
+            color: #FFFFFF;
+            text-shadow:
+                2px 2px 0 #8B0000,
+                0 0 10px rgba(255,215,0,0.5);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-price span {
+            font-size: 0.65em;
+            opacity: 0.85;
+        }
+
+        .pricing-description {
+            font-size: 0.95rem;
+            color: #FFE4B5;
+            line-height: 1.65;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,228,181,0.65);
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        /* ── FINAL CTA ── */
+        .final-cta {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #FF4500 100%);
+            border-top: 6px solid #FFD700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255,215,0,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255,140,0,0.12) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .final-cta .section-heading {
+            color: #FFFFFF;
+            text-shadow:
+                3px 3px 0 #8B0000,
+                0 0 20px rgba(255,215,0,0.7);
+        }
+
+        .final-cta .section-lead {
+            max-width: 560px;
+            margin: 0 auto 2rem;
+        }
+
+        .final-cta .pricing-note {
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            .navbar {
-                padding: 0.8rem 1rem;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-link {
-                font-size: 1rem;
-                padding: 0.4rem 0.8rem;
-            }
-
+            .navbar { padding: 0.8rem 1rem; }
+            .logo { font-size: 1.5rem; }
+            .nav-links { gap: 1rem; }
+            .nav-link { font-size: 1rem; padding: 0.4rem 0.8rem; }
             .hero-container {
-                flex: 1;
-                padding: 0.8rem 0.3rem;
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+                padding-top: 110px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                justify-content: flex-start;
             }
-
-
-            .title-line-1 {
-                font-size: clamp(2rem, 8vw, 3.5rem);
-                margin-bottom: 0.5rem;
+            .title-line-1 { font-size: clamp(0.9rem, 5vw, 1.5rem); }
+            .title-line-2 { font-size: clamp(1.8rem, 9vw, 3.5rem); }
+            .hero-body {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                flex: none;
             }
-
-            .title-line-2 {
-                font-size: clamp(3.5rem, 14vw, 6rem);
+            .short-container {
+                order: -1;
+                height: auto;
+                min-height: unset;
+                max-height: none;
+                width: min(240px, 60vw);
+                aspect-ratio: 9/16;
+                margin-top: 2.75rem;
+                margin-bottom: 2.5rem;
             }
-
-            .video-container {
-                border-radius: 15px;
-                height: 30vh;
-                max-height: 180px;
-            }
-
-            .cta-button {
-                font-size: clamp(0.9rem, 4vw, 1.2rem);
-                padding: 0.6rem 1.8rem;
-            }
+            .hero-text { order: 1; width: 100%; padding: 1.25rem 1.25rem 3rem; }
+            .hero-headline { font-size: 1.35rem; }
+            .hero-pitch { font-size: 1.05rem; }
+            .hero-list li { font-size: 1.05rem; }
+            .cta-button { font-size: clamp(0.9rem, 4vw, 1.2rem); padding: 0.6rem 1.8rem; }
+            .section { padding: 3rem 1.5rem; }
         }
 
         @media (max-width: 480px) {
-            .navbar {
-                padding: 0.6rem 0.8rem;
-            }
-
-            .logo {
-                font-size: 1.3rem;
-            }
-
-            .nav-links {
-                gap: 0.5rem;
-            }
-
-            .nav-link {
-                font-size: 0.9rem;
-                padding: 0.3rem 0.6rem;
-            }
-
-            .hero-container {
-                flex: 1;
-                padding: 0.6rem 0.2rem;
-            }
-
-
-            .title-line-1 {
-                font-size: clamp(1.2rem, 6vw, 2rem);
-                margin-bottom: 0.2rem;
-            }
-
-            .title-line-2 {
-                font-size: clamp(2.5rem, 10vw, 3.5rem);
-            }
-
-            .video-container {
-                border-radius: 10px;
-                height: 25vh;
-                max-height: 140px;
-            }
-
-            .cta-button {
-                font-size: clamp(0.8rem, 3.5vw, 1.1rem);
-                padding: 0.7rem 2rem;
-            }
+            .navbar { padding: 0.6rem 0.8rem; }
+            .logo { font-size: 1.3rem; }
+            .nav-links { gap: 0.5rem; }
+            .nav-link { font-size: 0.9rem; padding: 0.3rem 0.6rem; }
+            .hero-container { padding-top: 100px; padding-left: 1rem; padding-right: 1rem; }
+            .hero-text { padding: 1rem 1rem 3rem; }
+            .title-line-1 { font-size: clamp(0.8rem, 4.5vw, 1.2rem); margin-bottom: 0.1rem; }
+            .title-line-2 { font-size: clamp(1.5rem, 8vw, 2.8rem); }
+            .short-container { width: min(200px, 55vw); }
+            .hero-headline { font-size: 1.25rem; }
+            .hero-pitch { font-size: 1rem; }
+            .hero-list li { font-size: 1rem; }
+            .cta-button { font-size: clamp(0.8rem, 3.5vw, 1.1rem); padding: 0.7rem 2rem; }
+            .section { padding: 2.5rem 1rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -445,17 +740,145 @@
         </ul>
     </nav>
 
+    <!-- HERO -->
     <div class="hero-container">
         <h1 class="title">
             <div class="title-line-1">THE BENGALURU BOOTSTRAP</div>
             <div class="title-line-2" id="rotating-word">BOYS</div>
         </h1>
-        
-        <div class="video-container">
-            <iframe class="hero-video" src="https://www.youtube.com/embed/IRDEikKQmQA?controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <div class="hero-body">
+            <div class="hero-text">
+                <p class="hero-headline">Fix Your Sales. Convert Your Traffic. Close More Deals.</p>
+                <p class="hero-pitch">If you already have a product, traffic, or outbound—and it's not turning into revenue—this is where that gets fixed.</p>
+                <p class="hero-pitch">Most founders think they have a sales or marketing problem. In reality, it's a breakdown between product, messaging, and founder-led sales. You cannot delegate an enormously important task like product or sales without understanding it yourself.</p>
+                <p class="hero-pitch">Every founder I consult becomes a <strong>Bengaluru Bootstrap Boy</strong> — entering the inner circle of how I build from "money backwards."</p>
+                <ul class="hero-list">
+                    <li>No business jargon.</li>
+                    <li>No strategy decks.</li>
+                    <li>Just what actually moves revenue.</li>
+                </ul>
+                <p class="hero-pitch"><strong>Free first call. Walk away with clarity, whether we work together or not.</strong></p>
+            </div>
+
+            <div class="short-container">
+                <iframe class="short-video" src="https://www.youtube.com/embed/pSnmIS7HFvw?controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
-        
-        <a href="https://wa.me/14156448166" class="cta-button">Hit me up</a>
+    </div>
+
+    <div class="noodle-divider"></div>
+
+    <!-- CONTENT SECTIONS -->
+    <div class="sections-wrapper">
+
+        <div class="section">
+            <h2 class="section-heading">What You're Dealing With</h2>
+            <p class="section-lead">You've already done the hard part:</p>
+            <ul class="noodle-list">
+                <li>You built something real</li>
+                <li>You're getting traffic or doing outbound</li>
+                <li>You're taking calls</li>
+            </ul>
+            <p class="section-lead" style="margin-top: 1.5rem;">But:</p>
+            <ul class="noodle-list">
+                <li>Outbound isn't converting</li>
+                <li>Your product or service is churning customers</li>
+                <li>Sales calls aren't closing consistently</li>
+            </ul>
+            <p class="section-body" style="margin-top: 1.5rem;">At this point, it's not about your effort — it's leaks you might just be blind to across product, messaging, and sales.</p>
+        </div>
+
+        <div class="noodle-divider"></div>
+
+        <div class="section">
+            <h2 class="section-heading">How I Work</h2>
+            <p class="section-lead">This isn't about cheer-leading — I get involved in your business as if it were my own. A cofounder without equity.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">Find the leak</div>
+                    <div class="card-body">Identify exactly what's leaking revenue — traffic, outbound, or closing.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Fix the message</div>
+                    <div class="card-body">Refine your thought processes, messaging, and product so it actually converts.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Force focus</div>
+                    <div class="card-body">Push you to tackle what you're probably missing — churn, proper outbound, reducing MVP scope. The uncomfortable stuff that moves the needle.</div>
+                </div>
+            </div>
+            <p class="section-body" style="margin-top: 1.5rem;">You get direct, honest feedback and execution-level thinking — not generic advice. I'm more of a friend than a colleague. (The friend who cares but isn't afraid to tell you the truth.)</p>
+        </div>
+
+        <div class="noodle-divider"></div>
+
+        <div class="section">
+            <h2 class="section-heading">First Call (Free)</h2>
+            <p class="section-lead">This isn't a pitch call. You'll walk away with:</p>
+            <ul class="noodle-list">
+                <li>A clear breakdown of where your funnel is leaking revenue</li>
+                <li>Immediate improvements to your offer, messaging, or product</li>
+                <li>A prioritized action plan you can execute right away</li>
+            </ul>
+            <p class="section-body" style="margin-top: 1.5rem;">If there's a fit, we keep going. If not, you still leave with value.</p>
+        </div>
+
+        <div class="noodle-divider"></div>
+
+        <div class="section">
+            <h2 class="section-heading">Pricing</h2>
+            <p class="section-lead">Time is the most important thing in the world. A service that might make you back 100x your money is quite valuable.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tier">High-touch (weekly)</div>
+                    <div class="pricing-price">$1,600 – $4,250 USD / month</div>
+                    <div class="pricing-description">1 call per week + async access through WhatsApp + emergency calls</div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-tier">Low-touch (monthly)</div>
+                    <div class="pricing-price">$425 – $1,065 USD / month</div>
+                    <div class="pricing-description">1 call per month + limited support</div>
+                </div>
+            </div>
+            <p class="pricing-note">Most engagements fall within these ranges depending on scope.</p>
+        </div>
+
+        <div class="noodle-divider"></div>
+
+        <div class="section">
+            <h2 class="section-heading">Why Me</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">15+ Years Building, Coding & Closing</div>
+                    <div class="card-body">Not a career consultant. An operator in the trenches of product, marketing, and sales since age 21 — almost exclusively driven by understanding what actually makes a market move.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Proven 7-Figure Track Record</div>
+                    <div class="card-body">I didn't just study systems; I built them. Managed and operated a 7-figure online business generating passive revenue for over a decade.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Full-Stack Expertise</div>
+                    <div class="card-body">Product & code, B2B sales, and mentorship across founders. First-time founders build an app with 6 features and hope for the best. Second-time founders start from a sales channel and work backwards. Think with me.</div>
+                </div>
+            </div>
+            <p class="section-body" style="margin-top: 2rem;">Philosophy and music degree from UCSB in California. Self-employed since 21, living outside the US for 15 years, now settled in Bangalore. You can see more at <a href="https://www.danwill.work" style="color: #FFD700; text-shadow: 1px 1px 0 #8B0000;">danwill.work</a>. Deeply musical — guitar, alto sax, keyboard, every major DAW, non-profit record label in Bangalore.</p>
+            <p class="section-body">Most founders think they have a sales or marketing problem. In reality, it's a breakdown between product, messaging, and founder-led sales. You cannot delegate an enormously important task like product or sales without understanding it yourself.</p>
+            <p class="section-body">As a standard of my practice, every founder I consult becomes a <strong style="color: #FFD700; text-shadow: 1px 1px 0 #8B0000;">Bengaluru Bootstrap Boy</strong> — entering the inner circle of how I build from "money backwards."</p>
+        </div>
+
+    </div>
+
+    <!-- FINAL CTA -->
+    <div id="final-cta-section" class="final-cta">
+        <h2 class="section-heading">Let's Talk</h2>
+        <p class="section-lead">If your business should be making more money than it is right now, reaching out will take literally the next 20 seconds. What do you have to lose?</p>
+        <a href="https://wa.me/14156448166" class="cta-button">Free First Call</a>
+        <p class="pricing-note">No business jargon. No strategy decks. Just what actually moves revenue.</p>
+    </div>
+
+    <div id="floating-cta" style="position:fixed;bottom:2rem;left:0;width:100%;display:flex;justify-content:center;z-index:1000;transition:opacity 0.3s ease,visibility 0.3s ease;">
+        <a href="https://wa.me/14156448166" class="cta-button" style="width:300px;">Hit me up</a>
     </div>
 
     <script>
@@ -469,6 +892,19 @@
         }
 
         setInterval(rotateWord, 1000);
+
+        const floatingCta = document.getElementById('floating-cta');
+        const finalCta = document.getElementById('final-cta-section');
+
+        function updateFloatingCta() {
+            const rect = finalCta.getBoundingClientRect();
+            const visible = rect.top < window.innerHeight;
+            floatingCta.style.opacity = visible ? '0' : '1';
+            floatingCta.style.visibility = visible ? 'hidden' : 'visible';
+        }
+
+        window.addEventListener('scroll', updateFloatingCta, { passive: true });
+        updateFloatingCta();
     </script>
 </body>
 </html>
