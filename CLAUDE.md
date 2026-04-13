@@ -24,3 +24,17 @@ The visual identity is a "Cup of Noodles" aesthetic. All styling is inline in `i
 ## Contact
 
 The WhatsApp link `https://wa.me/14156448166` appears in two places (navbar link and CTA button). Update both if the number changes.
+
+## Frontend Design Guidelines
+
+This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics.
+
+Before coding any UI, choose a BOLD aesthetic direction — commit to one extreme: brutally minimal, maximalist, retro-futuristic, organic, luxury, brutalist, editorial, etc. Then execute it with precision.
+
+**Typography**: Avoid Inter, Roboto, Arial, system fonts. Use distinctive, characterful choices.
+**Color**: Commit to a cohesive palette. Dominant colors + sharp accents. No purple gradients on white.
+**Motion**: CSS-only where possible. One well-orchestrated page load > scattered micro-interactions.
+**Spatial Composition**: Asymmetry, overlap, diagonal flow, grid-breaking elements.
+**Backgrounds**: Gradient meshes, noise textures, geometric patterns — not flat solid colors.
+
+NEVER produce generic AI aesthetics. Every design should be unmistakably different from the last.

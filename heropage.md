@@ -14,63 +14,61 @@ As a standard of my practice, every founder I consult becomes a **Bengaluru Boot
 
 ---
 
-## What You're Dealing With
+## What I Do
 
 You've already done the hard part:
 
-- You built something real
-- You're getting traffic or doing outbound
-- You're taking calls
+- You took a leap of faith and you built something
+- You're maybe getting traffic or doing outbound
+- You're MAYBE taking calls
 
 But:
 
-- Outbound isn't converting
-- Your product or service is churning customers
-- Sales calls aren't closing consistently
+- You don't have enough sales calls
+- Your product or service might be churning the few customers you are getting
+- Your "burn rate" every month means you're "default dead" ie. you're nowhere near profitable
 
-At this point, it's not about your effort—it's leaks you might just be blind to across product, messaging, and sales.
+At this point, it's not about your effort. Most of the time founders just literally don't know best practices. I have coached YC founders just to tell them YC fundamentals they've ignored. (lol)
 
 ---
 
-## How I Work
+## How I Work: A cofounder without equity
 
-This isn't about cheer-leading; I get involved in your business as if it were my own. A Cofounder without equity.
+I get involved in your business as if it were my own.
 
-- Identify exactly whhats leaking revenue (traffic, outbound, or closing)
-- Refine your thought processes, messaging, and product so it actually converts
-- Force you to focus on the key things you're probably missing (churn, proper outbound, reducing the scope of an MVP (tough but so important  ), etc.)
+- Identify exactly whats broken (product not actually solving the problem, lack of outbound, or closing)
+- Refine your thought processes, messaging, and product so you can convert
+- Force you to focus on the key things you're probably missing
 
-You get direct, honest feedback and execution-level thinking—not generic advice. (I also want to have a good time, I'm more of a friend then a collegague, but sometimes friends are the most brutally honest.)
+As long as you're okay with direct feedback (The market's going to tell you anyway!) then we're going to have some fun and make sure your startup succeeds.
 
 ---
 
 ## First Call (Free)
 
-This isn't a pitch call. You'll walk away with:
+This isn't a sales pitch. I'm going to prove my value by being valuable.
 
-- A clear breakdown of where your funnel is leaking revenue
-- Immediate improvements to your offer, messaging, or product
-- A prioritized action plan you can execute right away
+- A clear breakdown of where your startup might be failing
+- Immediate improvements and suggestions
+- An action plan you can walk away with
 
-If there's a fit, we keep going. If not, you still leave with value.
+If you find it valuable and want more, then we schedule a call. 
 
 ---
 
-## Pricing
-
-Time is the most important thing in the world. A service that might make you back 100x your money is quite valuable. 
+## Pricing: I aim to make you up to 100x your money, if not more.
 
 **High-touch (weekly)**
-₹1.5L – ₹4L ($1,600 – $4,250)/month
+($1,595 – $2,595)/month
 1 call per week + async access through WhatsApp + emergency calls
 
 **Low-touch (monthly)**
-₹40k – ₹1L ($425 – $1,065)/month
+($425 – $1,065)/month
 1 call per month + limited support
 
 ---
 
-## Why Me
+## Why Me (Why me is because we'll take a free call and you'll see I'm actually valuable. Honestly, this is just for your curiosity.)
 
 ### 15+ Years of Building, Coding, and Closing
 
