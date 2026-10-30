@@ -404,6 +404,221 @@
             display: block;
         }
 
+        /* ── HOW IT WORKS ── */
+        .how {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+            gap: 3rem 4rem;
+            margin-top: 2.5rem;
+        }
+
+        .how-phase-head {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .how-phase-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+        }
+
+        .how-phase-price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            letter-spacing: 0.03em;
+            line-height: 1;
+        }
+
+        .how-steps {
+            list-style: none;
+        }
+
+        /* the rail that joins one number to the next */
+        .how-step::after {
+            content: '';
+            position: absolute;
+            left: calc(1.375rem - 0.5px);
+            top: 2.75rem;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(180deg, var(--gold), var(--orange));
+            opacity: 0.55;
+        }
+
+        .how-step:last-child::after { display: none; }
+
+        .how-step {
+            position: relative;
+            display: grid;
+            grid-template-columns: 2.75rem minmax(0, 1fr);
+            column-gap: 1.25rem;
+            padding-bottom: 2rem;
+        }
+
+        .how-step:last-child { padding-bottom: 0; }
+
+        .how-num {
+            width: 2.75rem;
+            height: 2.75rem;
+            display: grid;
+            place-items: center;
+            background: var(--bg);
+            border: 1px solid var(--orange);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.35rem;
+            color: var(--gold);
+            letter-spacing: 0.04em;
+            line-height: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .how-step--end .how-num {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--bg);
+        }
+
+        .how-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--cream);
+            letter-spacing: 0.03em;
+            line-height: 1;
+            margin: 0.55rem 0 0.5rem;
+        }
+
+        .how-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1rem, 1.3vw, 1.08rem);
+            color: var(--cream);
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* step 3: the two ways it can go */
+        .how-fork {
+            display: grid;
+            gap: 0.6rem;
+            margin-top: 0.15rem;
+        }
+
+        .how-path {
+            padding: 0.8rem 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--cream);
+        }
+
+        .how-path--out {
+            border: 1px dashed rgba(240,232,216,0.28);
+            color: var(--muted);
+        }
+
+        .how-path--in {
+            border: 1px solid var(--gold);
+            background: rgba(255,215,0,0.05);
+        }
+
+        .how-path-tag {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin-bottom: 0.3rem;
+        }
+
+        .how-path--out .how-path-tag { color: var(--muted); }
+        .how-path--in .how-path-tag { color: var(--gold); }
+
+        /* what you pay, drawn to scale: ₹50,000 is 5% of ₹10 lakh */
+        .how-meter {
+            margin-top: 3.5rem;
+            max-width: 1000px;
+        }
+
+        .how-meter-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            margin-bottom: 1rem;
+        }
+
+        .how-meter-bar {
+            position: relative;
+            display: flex;
+            height: 10px;
+        }
+
+        .how-meter-deposit {
+            flex: 0 0 5%;
+            background: var(--gold);
+        }
+
+        .how-meter-share {
+            flex: 1 1 auto;
+            background: repeating-linear-gradient(-45deg,
+                rgba(255,85,0,0.85) 0 6px,
+                rgba(255,85,0,0.35) 6px 12px);
+        }
+
+        /* the cap: a hard stop at the end */
+        .how-meter-bar::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -8px;
+            bottom: -8px;
+            width: 3px;
+            background: var(--gold);
+        }
+
+        .how-meter-labels {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.45;
+            color: var(--muted);
+        }
+
+        .how-meter-labels strong {
+            display: block;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            letter-spacing: 0.03em;
+            line-height: 1.1;
+            color: var(--cream);
+        }
+
+        .how-meter-labels > :nth-child(2) { text-align: center; }
+        .how-meter-labels > :nth-child(3) { text-align: right; }
+
+        @media (max-width: 480px) {
+            .how-meter-labels { font-size: 0.85rem; gap: 0.75rem; grid-template-columns: auto 1fr auto; }
+            .how-meter-labels strong { font-size: 1.25rem; }
+            .how-title { font-size: 1.6rem; }
+        }
+
         /* ── CTA BUTTON ── */
         .cta-button {
             font-family: 'Space Grotesk', sans-serif;
@@ -831,7 +1046,7 @@
         <div class="hero-body">
             <div class="hero-text">
                 <h2 class="hero-headline">Don't raise your <span style="white-space: nowrap">pre-seed</span> yet.</h2>
-                <p class="hero-pitch">Bootstrap to real revenue with me first. Then walk into investor meetings as one of the few founders who already sell.</p>
+                <p class="hero-pitch">Early stage product and sales consulting. Bootstrap to real revenue with me first. Then walk into investor meetings as one of the few founders who already sell.</p>
                 <ul class="hero-list">
                     <li>Bangalore founders only</li>
                     <li>2 spots</li>
@@ -867,6 +1082,97 @@
                 <li>No customer conversations → no product-market fit → no revenue → no runway.</li>
                 <li>Raising early doesn't fix it. It just pays for the burn while you guess.</li>
             </ul>
+        </div>
+
+        <div class="noodle-divider"></div>
+
+        <div class="section">
+            <h2 class="section-heading">This is how it works</h2>
+
+            <div class="how">
+                <div class="how-phase">
+                    <div class="how-phase-head">
+                        <span class="how-phase-name">Before we start</span>
+                        <span class="how-phase-price">₹50,000, refundable</span>
+                    </div>
+                    <ol class="how-steps">
+                        <li class="how-step">
+                            <span class="how-num" aria-hidden="true">01</span>
+                            <div>
+                                <h3 class="how-title">Book</h3>
+                                <p class="how-text">Message me on WhatsApp and pay ₹50,000 to book your first session.</p>
+                            </div>
+                        </li>
+                        <li class="how-step">
+                            <span class="how-num" aria-hidden="true">02</span>
+                            <div>
+                                <h3 class="how-title">First session</h3>
+                                <p class="how-text">We meet at my home office in Indiranagar. I go through your startup and lay out your plan to revenue.</p>
+                            </div>
+                        </li>
+                        <li class="how-step">
+                            <span class="how-num" aria-hidden="true">03</span>
+                            <div>
+                                <h3 class="how-title">Decide</h3>
+                                <div class="how-fork">
+                                    <p class="how-path how-path--out"><span class="how-path-tag">Don't like the plan?</span>You get all ₹50,000 back.</p>
+                                    <p class="how-path how-path--in"><span class="how-path-tag">Like it?</span>We start. The ₹50,000 becomes non-refundable and counts toward your ₹10 lakh total.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="how-phase">
+                    <div class="how-phase-head">
+                        <span class="how-phase-name">Once we start</span>
+                        <span class="how-phase-price">5% of new revenue</span>
+                    </div>
+                    <ol class="how-steps" start="4">
+                        <li class="how-step">
+                            <span class="how-num" aria-hidden="true">04</span>
+                            <div>
+                                <h3 class="how-title">Set your baseline</h3>
+                                <p class="how-text">Your baseline is your average monthly revenue for the 3 months before we start. Pre-revenue? Your baseline is ₹0.</p>
+                            </div>
+                        </li>
+                        <li class="how-step">
+                            <span class="how-num" aria-hidden="true">05</span>
+                            <div>
+                                <h3 class="how-title">Work together</h3>
+                                <p class="how-text">In person in Indiranagar and on calls, building your early stage product and your sales until revenue grows.</p>
+                            </div>
+                        </li>
+                        <li class="how-step">
+                            <span class="how-num" aria-hidden="true">06</span>
+                            <div>
+                                <h3 class="how-title">Pay monthly</h3>
+                                <p class="how-text">Each month you report your revenue from your bank or payment dashboard, and pay 5% of whatever is above your baseline. A month at or below your baseline costs ₹0.</p>
+                            </div>
+                        </li>
+                        <li class="how-step how-step--end">
+                            <span class="how-num" aria-hidden="true">07</span>
+                            <div>
+                                <h3 class="how-title">Done</h3>
+                                <p class="how-text">Once your payments add up to ₹10 lakh, including the first ₹50,000, they stop.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="how-meter" role="img" aria-label="What you pay in total: ₹50,000 for the first session, then 5% of new revenue each month, stopping at ₹10 lakh.">
+                <p class="how-meter-name">What you pay, in total</p>
+                <div class="how-meter-bar" aria-hidden="true">
+                    <span class="how-meter-deposit"></span>
+                    <span class="how-meter-share"></span>
+                </div>
+                <div class="how-meter-labels" aria-hidden="true">
+                    <span><strong>₹50,000</strong>First session</span>
+                    <span><strong>5%</strong>Of new revenue, each month</span>
+                    <span><strong>₹10 lakh</strong>Payments stop</span>
+                </div>
+            </div>
         </div>
 
         <div class="noodle-divider"></div>
