@@ -984,7 +984,11 @@
         <div class="section">
             <h2 class="section-heading">Bonus Stream of Conscious Video</h2>
             <div class="video-wide">
-                <iframe src="https://www.youtube.com/embed/Cm_SvWVWBHo?rel=0&modestbranding=1&playsinline=1" title="Bonus Stream of Conscious Video" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="" data-src="https://www.youtube.com/embed/Cm_SvWVWBHo?rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&autoplay=1" title="Bonus Stream of Conscious Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+                <div class="short-poster-wrap">
+                    <img class="short-poster" src="https://i.ytimg.com/vi/Cm_SvWVWBHo/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/Cm_SvWVWBHo/hqdefault.jpg" alt="Bonus video thumbnail" loading="lazy" />
+                    <div class="short-play-btn"></div>
+                </div>
             </div>
         </div>
 
@@ -1056,11 +1060,24 @@
     </div>
 
     <script>
-        document.getElementById('posterWrap').addEventListener('click', function() {
-            const iframe = document.getElementById('ytIframe');
-            iframe.src = iframe.dataset.src;
-            iframe.style.display = 'block';
-            this.style.display = 'none';
+        // click a video thumbnail to load and play its YouTube video
+        document.querySelectorAll('.short-poster-wrap').forEach(function(wrap) {
+            wrap.addEventListener('click', function() {
+                const iframe = wrap.parentElement.querySelector('iframe');
+                iframe.src = iframe.dataset.src;
+                iframe.style.display = 'block';
+                wrap.style.display = 'none';
+            });
+        });
+
+        // YouTube has no full-size thumbnail for some videos: fall back to the standard one
+        document.querySelectorAll('img[data-fallback]').forEach(function(img) {
+            const useFallback = function() {
+                if (img.src !== img.dataset.fallback) img.src = img.dataset.fallback;
+            };
+            const check = function() { if (img.naturalWidth && img.naturalWidth <= 120) useFallback(); };
+            img.addEventListener('error', useFallback);
+            if (img.complete) check(); else img.addEventListener('load', check);
         });
 
         const words = ['BOYS', 'BABES', 'NON-BINARIES'];
